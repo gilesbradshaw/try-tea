@@ -8,7 +8,9 @@ jobs:
   check-and-test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: http://sigyl.com:3000/actions/checkout@v3.5.4
+        with:
+          token: ${{ github.token }}
       - name: setup go
         uses: https://github.com/actions/setup-go@v4
         with:
