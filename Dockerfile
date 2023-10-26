@@ -3,7 +3,7 @@ COPY . /build/
 WORKDIR /build
 RUN	make build
 
-FROM cgr.dev/chainguard/static:latest
+FROM ubuntu:latest
 COPY --from=build /build/tea /tea
 VOLUME [ "/app" ]
 ENV HOME="/app"
